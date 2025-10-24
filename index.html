@@ -1,49 +1,224 @@
-<!doctype html>
+<!
+d
+octype html>
 <html lang="en">
-<head>
+<hea
+d>
 <meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Digit — Peer-to-Peer Micro-Lending (Interactive Mockup)</title>
+<meta name="viewport" content="wi
+d
+th=
+d
+evice-wi
+d
+th,initial-scale=1" />
+<title>
+D
+i
+git — Peer-to-Peer Micro-Len
+d
+i
+ng (Interactive Mockup)</title>
 <style>
   :root{
     --bg:#f6f8fb;
-    --card:#ffffff;
+    --car
+d
+:#ffffff;
     --primary:#1f6feb;
     --accent:#0b66ff;
-    --muted:#6b7280;
-    --dark:#0f1724;
+    --mute
+d
+:#6b7280;
+    --
+d
+ark:#0f1724;
     --glass:rgba(255,255,255,0.6);
     --phone-bg:#0b1220;
     --phone-surface:#0f1724;
   }
-  html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; background:linear-gradient(180deg,#f6f8fb 0%, #eef3fb 100%);}
-  .container{max-width:1200px;margin:40px auto;padding:24px;display:grid;grid-template-columns:1fr 520px;gap:36px;align-items:center;}
-  header{grid-column:1 / -1;display:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
-  .brand{font-weight:700;font-size:28px;color:var(--dark);} nav.toplinks a{margin-left:18px;color:var(--muted);text-decoration:none}
-  h1{font-size:44px;margin:0 0 8px;color:var(--dark)}
-  p.lead{margin:0 0 22px;color:var(--muted);font-size:18px}
+  html,bo
+d
+y{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; backgroun
+d:linear-gra
+d
+i
+ent(180d
+eg,#f6f8fb 0%, #eef3fb 100%);}
+  .container{max-wi
+d
+th:1200px;margin:40px auto;pa
+d
+d
+i
+ng:24px;d
+i
+splay:gri
+d;gri
+d
+-template-columns:1fr 520px;gap:36px;align-items:center;}
+  hea
+d
+er{gri
+d
+-column:1 / -1;d
+i
+splay:flex;justify-content:space-between;align-items:center;margin-bottom:8px}
+  .bran
+d{font-weight:700;font-size:28px;color:var(--
+d
+ark);} nav.toplinks a{margin-left:18px;color:var(--mute
+d);text-
+d
+ecoration:none}
+  h1{font-size:44px;margin:0 0 8px;color:var(--
+d
+ark)}
+  p.lea
+d{margin:0 0 22px;color:var(--mute
+d);font-size:18px}
 
   /* CTA box */
-  .cta{background:var(--card);padding:22px;border-radius:12px;box-shadow:0 6px 18px rgba(15,23,36,0.06);display:flex;align-items:center;justify-content:space-between}
-  .cta button{background:var(--primary);border:none;color:white;padding:14px 20px;border-radius:10px;font-weight:600;cursor:pointer}
-  .cta .note{color:var(--muted);font-size:14px}
+  .cta{backgroun
+d:var(--car
+d);pa
+d
+d
+i
+ng:22px;bor
+d
+er-ra
+d
+i
+us:12px;box-sha
+d
+ow:0 6px 18px rgba(15,23,36,0.06);d
+i
+splay:flex;align-items:center;justify-content:space-between}
+  .cta button{backgroun
+d:var(--primary);bor
+d
+er:none;color:white;pa
+d
+d
+i
+ng:14px 20px;bor
+d
+er-ra
+d
+i
+us:10px;font-weight:600;cursor:pointer}
+  .cta .note{color:var(--mute
+d);font-size:14px}
 
   /* Phone mockup */
-  .phone-wrap{position:relative;display:flex;justify-content:center;align-items:center}
-  .phone-frame{width:360px;height:740px;border-radius:36px;padding:18px;background:linear-gradient(180deg,#0b1220, #0f1724);box-shadow:0 20px 60px rgba(7,10,25,0.35);position:relative;overflow:hidden;border:10px solid #0b1220}
+  .phone-wrap{position:relative;d
+i
+splay:flex;justify-content:center;align-items:center}
+  .phone-frame{wi
+d
+th:360px;height:740px;bor
+d
+er-ra
+d
+i
+us:36px;pa
+d
+d
+i
+ng:18px;backgroun
+d:linear-gra
+d
+i
+ent(180d
+eg,#0b1220, #0f1724);box-sha
+d
+ow:0 20px 60px rgba(7,10,25,0.35);position:relative;overflow:hi
+d
+d
+en;bor
+d
+er:10px soli
+d #0b1220}
   /* speaker notch */
-  .notch{position:absolute;left:50%;transform:translateX(-50%);top:8px;width:160px;height:28px;border-radius:12px;background:rgba(255,255,255,0.03);display:flex;align-items:center;justify-content:center;color:#fff;font-size:10px}
-  .screen{width:100%;height:100%;border-radius:20px;background:linear-gradient(180deg,var(--phone-bg), #071022);color:white;padding:18px;box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between}
+  .notch{position:absolute;left:50%;transform:translateX(-50%);top:8px;wi
+d
+th:160px;height:28px;bor
+d
+er-ra
+d
+i
+us:12px;backgroun
+d:rgba(255,255,255,0.03);d
+i
+splay:flex;align-items:center;justify-content:center;color:#fff;font-size:10px}
+  .screen{wi
+d
+th:100%;height:100%;bor
+d
+er-ra
+d
+i
+us:20px;backgroun
+d:linear-gra
+d
+i
+ent(180d
+eg,var(--phone-bg), #071022);color:white;pa
+d
+d
+i
+ng:18px;box-sizing:bor
+d
+er-box;d
+i
+splay:flex;flex-
+d
+i
+rection:column;justify-content:space-between}
 
   /* top row */
-  .screen .top-row{display:flex;justify-content:space-between;align-items:center}
-  .hambtn{background:transparent;border:0;color:rgba(255,255,255,0.9);font-size:18px;cursor:pointer}
-  .avatar{width:36px;height:36px;border-radius:999px;background:linear-gradient(90deg,#2da0ff,#6b8cff);display:flex;align-items:center;justify-content:center;font-weight:700;color:white}
+  .screen .top-row{d
+i
+splay:flex;justify-content:space-between;align-items:center}
+  .hambtn{backgroun
+d:transparent;bor
+d
+er:0;color:rgba(255,255,255,0.9);font-size:18px;cursor:pointer}
+  .avatar{wi
+d
+th:36px;height:36px;bor
+d
+er-ra
+d
+i
+us:999px;backgroun
+d:linear-gra
+d
+i
+ent(90d
+eg,#2
+d
+a0ff,#6b8cff);d
+i
+splay:flex;align-items:center;justify-content:center;font-weight:700;color:white}
 
   /* screens */
-  .ui-screen{display:none;flex-direction:column;gap:12px;flex:1}
-  .ui-screen.active{display:flex}
-  .splash{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px}
+  .ui-screen{d
+i
+splay:none;flex-
+d
+i
+rection:column;gap:12px;flex:1}
+  .ui-screen.active{d
+i
+splay:flex}
+  .splash{d
+i
+splay:flex;flex-
+d
+i
+rection:column;align-items:center;justify-content:center;gap:18px}
   .splash .title{font-size:28px;font-weight:700}
   .splash .subtitle{color:rgba(255,255,255,0.85);font-size:14px;text-align:center;padding:0 20px}
 
@@ -138,80 +313,226 @@
           <div class="note">Try the interactive mockup</div>
           <button id="ctaOpen">Get Started</button>
         </div>
-      </div>
+      </d
+iv>
 
-      <div class="screens-row" aria-hidden="false">
-        <div class="mini">
+      <d
+iv class="screens-row" aria-hi
+d
+d
+en="false">
+        <d
+iv class="mini">
           <h4>Splash</h4>
-          <p>Brand intro, quick borrow CTA</p>
-        </div>
-        <div class="mini">
+          <p>Bran
+d
+ intro, quick borrow CTA</p>
+        </d
+iv>
+        <d
+iv class="mini">
           <h4>Menu</h4>
-          <p>Slide-in menu, filters, navigation</p>
-        </div>
-        <div class="mini">
+          <p>Sli
+d
+e-in menu, filters, navigation</p>
+        </d
+iv>
+        <d
+iv class="mini">
           <h4>Settings</h4>
           <p>Link income sources, notifications</p>
-        </div>
-      </div>
+        </d
+iv>
+      </d
+iv>
 
-      <footer>Designed as an interactive mockup — no real funds are transferred. Use for prototyping and testing flows only.</footer>
+      <footer>
+D
+esigne
+d
+ as an interactive mockup — no real fun
+d
+s are transferre
+d
+. Use for prototyping an
+d
+ testing flows only.</footer>
     </section>
 
-    <aside class="phone-wrap" aria-label="Interactive phone mockup">
-      <div class="phone-frame" role="application" aria-roledescription="phone mockup">
-        <div class="notch">Digit</div>
-        <div class="screen" id="phoneScreen">
-          <div class="top-row">
-            <button id="hamburger" class="hambtn" aria-controls="sideMenu" aria-expanded="false">☰</button>
-            <div class="avatar" title="User">DJ</div>
-          </div>
+    <asi
+d
+e class="phone-wrap" aria-label="Interactive phone mockup">
+      <d
+iv class="phone-frame" role="application" aria-role
+d
+escription="phone mockup">
+        <d
+iv class="notch">
+D
+igit</d
+iv>
+        <d
+iv class="screen" i
+d="phoneScreen">
+          <d
+iv class="top-row">
+            <button i
+d="hamburger" class="hambtn" aria-controls="si
+d
+eMenu" aria-expan
+d
+e
+d="false">☰</button>
+            <d
+iv class="avatar" title="User">
+D
+J</d
+iv>
+          </d
+iv>
 
-          <!-- UI screens inside the phone -->
-          <div id="uiContainer">
+          <!-- UI screens insi
+d
+e the phone -->
+          <d
+iv i
+d="uiContainer">
             <!-- Splash -->
-            <div id="splash" class="ui-screen active" role="region" aria-label="Splash screen">
-              <div class="splash">
-                <div style="text-align:center">
-                  <div style="font-weight:700;font-size:18px">Digit</div>
-                  <div class="title">Borrow up to $500</div>
-                  <div class="subtitle">Fast, peer-funded micro-loans tailored to gig income. Transparent rates, escrowed payouts, and income-linked repayment windows.</div>
-                </div>
+            <d
+iv i
+d="splash" class="ui-screen active" role="region" aria-label="Splash screen">
+              <d
+iv class="splash">
+                <d
+iv style="text-align:center">
+                  <d
+iv style="font-weight:700;font-size:18px">
+D
+igit</d
+iv>
+                  <d
+iv class="title">Borrow up to $500</d
+iv>
+                  <d
+iv class="subtitle">Fast, peer-fun
+d
+e
+d
+ micro-loans tailore
+d
+ to gig income. Transparent rates, escrowe
+d
+ payouts, an
+d
+ income-linke
+d
+ repayment win
+d
+ows.</d
+iv>
+                </d
+iv>
 
-                <div style="width:100%;display:flex;gap:12px;padding:0 12px">
-                  <button class="btn-primary" id="toBorrow">Borrow</button>
-                  <button class="btn-ghost" id="toMatch">Matching Tool</button>
-                </div>
-              </div>
-            </div>
+                <d
+iv style="wi
+d
+th:100%;d
+isplay:flex;gap:12px;pa
+d
+d
+ing:0 12px">
+                  <button class="btn-primary" i
+d="toBorrow">Borrow</button>
+                  <button class="btn-ghost" i
+d="toMatch">Matching Tool</button>
+                </d
+iv>
+              </d
+iv>
+            </d
+iv>
 
             <!-- Borrow / Request -->
-            <div id="borrow" class="ui-screen" role="region" aria-label="Borrow screen">
-              <div>
-                <div style="display:flex;justify-content:space-between;align-items:center">
-                  <div class="chip">Borrower • Verified</div>
-                  <div class="muted">Risk score: <strong id="riskScore">72</strong></div>
-                </div>
+            <d
+iv i
+d="borrow" class="ui-screen" role="region" aria-label="Borrow screen">
+              <d
+iv>
+                <d
+iv style="d
+isplay:flex;justify-content:space-between;align-items:center">
+                  <d
+iv class="chip">Borrower • Verifie
+d
+</d
+iv>
+                  <d
+iv class="mute
+d
+">Risk score: <strong i
+d="riskScore">72</strong></d
+iv>
+                </d
+iv>
 
-                <div class="card" aria-hidden="false">
-                  <div style="display:flex;justify-content:space-between;align-items:center">
-                    <div class="muted">Borrow up to</div>
-                    <div class="amount" id="amount">$250</div>
-                  </div>
+                <d
+iv class="car
+d
+" aria-hi
+d
+d
+en="false">
+                  <d
+iv style="d
+isplay:flex;justify-content:space-between;align-items:center">
+                    <d
+iv class="mute
+d
+">Borrow up to</d
+iv>
+                    <d
+iv class="amount" i
+d="amount">$250</d
+iv>
+                  </d
+iv>
 
-                  <div class="slider-wrap">
-                    <input id="amtRange" type="range" min="20" max="500" value="250" step="10" aria-label="Select amount"/>
-                    <div style="display:flex;justify-content:space-between;color:rgba(255,255,255,0.55);font-size:12px">
+                  <d
+iv class="sli
+d
+er-wrap">
+                    <input i
+d="amtRange" type="range" min="20" max="500" value="250" step="10" aria-label="Select amount"/>
+                    <d
+iv style="d
+isplay:flex;justify-content:space-between;color:rgba(255,255,255,0.55);font-size:12px">
                       <span>$20</span><span>$500</span>
-                    </div>
-                  </div>
+                    </d
+iv>
+                  </d
+iv>
 
-                  <div class="options" role="group" aria-label="Expense purpose">
-                    <label class="option"><input type="radio" name="purpose" value="rent" checked /> <span style="margin-left:8px">Rent</span></label>
-                    <label class="option"><input type="radio" name="purpose" value="groceries" /> <span style="margin-left:8px">Groceries</span></label>
-                    <label class="option"><input type="radio" name="purpose" value="utilities" /> <span style="margin-left:8px">Utilities</span></label>
-                    <label class="option"><input type="radio" name="purpose" value="medical" /> <span style="margin-left:8px">Medical</span></label>
-                  </div>
+                  <d
+iv class="options" role="group" aria-label="Expense purpose">
+                    <label class="option"><input type="ra
+d
+io" name="purpose" value="rent" checke
+d /> <span style="margin-left:8px">Rent</span></label>
+                    <label class="option"><input type="ra
+d
+io" name="purpose" value="groceries" /> <span style="margin-left:8px">Groceries</span></label>
+                    <label class="option"><input type="ra
+d
+io" name="purpose" value="utilities" /> <span style="margin-left:8px">Utilities</span></label>
+                    <label class="option"><input type="ra
+d
+io" name="purpose" value="me
+d
+ical" /> <span style="margin-left:8px">Me
+d
+ical</span></label>
+                  </d
+iv>
 
                   <div style="margin-top:12px;color:rgba(255,255,255,0.75);font-size:13px">
                     <div><strong>Repayment options:</strong> 1–8 weeks (linked to incoming gig deposits)</div>
@@ -285,7 +606,7 @@
 
                 <div style="margin-top:10px" class="card">
                   <div style="font-weight:700">Privacy & Risk</div>
-                  <div class="muted" style="margin-top:8px;font-size:13px">Digits shares only verification-derived scores with lenders; sensitive income data is not exposed. Smart-matching pools spread single-loan exposure.</div>
+                  <div class="muted" style="margin-top:8px;font-size:13px">Digit shares only verification-derived scores with lenders; sensitive income data is not exposed. Smart-matching pools spread single-loan exposure.</div>
                 </div>
               </div>
             </div>
